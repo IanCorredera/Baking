@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS tblDirections (
     fldStep13 varchar(1000) DEFAULT NULL,
     fldStep14 varchar(1000) DEFAULT NULL,
     fldStep15 varchar(1000) DEFAULT NULL,
-)   ENGINE=InnoDB AUTO_INCREMENT=2228 DEFAULT CHARSET=utf8;
+)   
 
 INSERT INTO tblDirections (pmkRecipeName, fldStep1, fldStep2, fldStep3, fldStep4,
 fldStep5, fldStep6, fldStep7, fldStep8, fldStep9, fldStep10, fldStep11, fldStep12,
