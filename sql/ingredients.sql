@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS tblIngredients;
 CREATE TABLE IF NOT EXISTS tblIngredients (
     pmkRecipeName varchar(255) DEFAULT NULL,
     fldIngredient varchar(255) DEFAULT NULL,
-)   ENGINE=InnoDB AUTO_INCREMENT=2228 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2228 DEFAULT CHARSET=utf8;
 
 INSERT INTO tblIngredients (pmkRecipeName, fldIngredient) VALUES
 ('Lemon-Poppy Seed Bread', '1.5 cups white whole wheat flour'),
