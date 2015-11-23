@@ -6,5 +6,5 @@ CREATE TABLE IF NOT EXISTS tblRecipes (
     fldCategory varchar(50) DEFAULT NULL
 )   
 
-INSERT INTO tblRecipes (pmkRecipeName, fldYield, fldBakeTime, fldCategory) VALUES ('Lemon Poppy Seed Bread', 'One 9 x 5-inch loaf', '1 hour', 'Quick Bread');
+INSERT INTO tblRecipes (pmkRecipeName, fldYield, fldBakeTime, fldCategory) VALUES ('LemonPoppySeedBread', 'One9x5-inchloaf', '1hour', 'QuickBread');
 
