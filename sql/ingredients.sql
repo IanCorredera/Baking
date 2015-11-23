@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS tblIngredients;
 CREATE TABLE IF NOT EXISTS tblIngredients (
     pmkRecipeName varchar(255) DEFAULT NULL,
     fldIngredient varchar(255) DEFAULT NULL,
-)
+);
 
 INSERT INTO tblIngredients (pmkRecipeName, fldIngredient) VALUES
 ('Lemon-Poppy Seed Bread', '1.5 cups white whole wheat flour'),
