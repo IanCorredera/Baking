@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS tblDirections (
     fldStep12 varchar(1000) DEFAULT NULL,
     fldStep13 varchar(1000) DEFAULT NULL,
     fldStep14 varchar(1000) DEFAULT NULL,
-    fldStep15 varchar(1000) DEFAULT NULL,
+    fldStep15 varchar(1000) DEFAULT NULL
 );   
 
 INSERT INTO tblDirections (pmkRecipeName, fldStep1, fldStep2, fldStep3, fldStep4,
