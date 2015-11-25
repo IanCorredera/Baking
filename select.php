@@ -12,10 +12,10 @@ include "top.php";
 
 print '<table>';
 
-$query = "select pmkRecipeName, fldYield, fldBakeTime, fldIngredient, fldStep1, fldStep2, fldStep3 
+$query = "select tblRecipes.pmkRecipeName, fldYield, fldBakeTime, fldIngredient, fldStep1, fldStep2, fldStep3 
 from tblRecipes, tblIngredients, tblDirections
 where tblRecipes.pmkRecipeName = tblIngredients.pmkRecipeName 
-and tblRecipes.pmkRecipeName = tblDirections.pmkRecipeName";
+and tblIngredients.pmkRecipeName = tblDirections.pmkRecipeName";
     $columns = 7;
     
     $info2 = $thisDatabaseReader->testquery($query, "", 0, 0, 0, 0, false, false);
