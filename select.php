@@ -18,8 +18,8 @@ where tblRecipes.pmkRecipeName = tblIngredients.pmkRecipeName
 and tblRecipes.pmkRecipeName = tblDirections.pmkRecipeName";
     $columns = 7;
     
-    $info2 = $thisDatabaseReader->testquery($query, "", 1, 2, 0, 0, false, false);
-    $info2 = $thisDatabaseReader->select($query, "", 1, 2, 0, 0, false, false);
+    $info2 = $thisDatabaseReader->testquery($query, "", 0, 0, 0, 0, false, false);
+    $info2 = $thisDatabaseReader->select($query, "", 0, 0, 0, 0, false, false);
 
     $highlight = 0; // used to highlight alternate rows
     foreach ($info2 as $rec) {
