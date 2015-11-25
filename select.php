@@ -16,7 +16,7 @@ $query = "select tblRecipes.pmkRecipeName, fldYield, fldBakeTime, fldIngredient1
 from tblRecipes, tblIngredients, tblDirections
 where tblRecipes.pmkRecipeName = tblIngredients.pmkRecipeName 
 and tblIngredients.pmkRecipeName = tblDirections.pmkRecipeName";
-    $columns = 13;
+    $columns = 20;
     
     $info2 = $thisDatabaseReader->testquery($query, "", 0, 0, 0, 0, false, false);
     $info2 = $thisDatabaseReader->select($query, "", 0, 0, 0, 0, false, false);
