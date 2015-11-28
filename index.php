@@ -6,7 +6,6 @@
  * and open the template in the editor.
  */
 include top.php;
-include nav.php;
 include footer.php;
 
 
