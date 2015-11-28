@@ -6,9 +6,13 @@
  * and open the template in the editor.
  */
 include "top.php";
-include "footer.php"
+
 ?>
 <h1>About</h1>
 
 <p>This site is an online recipe book full of tasty treats and ideas.</p>
 
+<?php
+
+include "footer.php";
+?>

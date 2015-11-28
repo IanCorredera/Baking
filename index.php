@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 include "top.php";
-include "footer.php";
+
 
 
 
@@ -14,3 +14,8 @@ include "footer.php";
 
 ?>
 
+<?php
+
+include "footer.php";
+
+?>
