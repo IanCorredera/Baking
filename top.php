@@ -8,7 +8,7 @@ require_once('lib/custom-functions.php');
         <title>Baking Recipes</title>
         <meta charset="utf-8">
         <meta name="author" content="Ian Corredera">
-        <meta name="description" content="Table showing baking recipes">
+        <meta name="description" content="Databese of baking recipes">
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
