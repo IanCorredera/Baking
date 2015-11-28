@@ -5,8 +5,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-include top.php;
-include nav.php;
+include "top.php";
+include "footer.php";
 
 ?>
 <h1>Select a recipe</h1>
