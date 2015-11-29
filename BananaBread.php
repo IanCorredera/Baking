@@ -20,9 +20,9 @@ where tblRecipes.pmkRecipeName = tblIngredients.pmkRecipeName
 and tblIngredients.pmkRecipeName = tblDirections.pmkRecipeName
 and tblRecipes.pmkRecipeName = 'Banana Bread'";
     
-    $columns = 20;
+    $columns = 22;
     
-    $info2 = $thisDatabaseReader->testquery($query, "", 0, 0, 2, 0, false, false);
+    //$info2 = $thisDatabaseReader->testquery($query, "", 0, 0, 2, 0, false, false);
     $info2 = $thisDatabaseReader->select($query, "", 0, 0, 2, 0, false, false);
 
     $highlight = 0; // used to highlight alternate rows

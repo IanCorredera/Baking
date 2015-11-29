@@ -11,6 +11,11 @@ include "top.php";
 ?>
 <h1>Select a recipe</h1>
 
+<a href="BananaBread.php">Banana Bread</a>
+<a href="BlueberryMuffins.php">Blueberry Muffins</a>
+<a href="ChocolateChipCookies.php">Chocolate Chip Cookies</a>
+<a href="Lemon-PoppySeedBread.php">Lemon-Poppy Seed Bread</a>
+
 <?php
 
 include "footer.php";
