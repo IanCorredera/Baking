@@ -18,7 +18,7 @@ $query = "select tblRecipes.pmkRecipeName, fldYield, fldBakeTime, fldIngredient1
 from tblRecipes, tblIngredients, tblDirections
 where tblRecipes.pmkRecipeName = tblIngredients.pmkRecipeName 
 and tblIngredients.pmkRecipeName = tblDirections.pmkRecipeName
-and tblRecipes.pmkRecipeName = 'Chocoloate Chip Cookies'";
+and tblRecipes.pmkRecipeName = 'Chocolate Chip Cookies'";
     $columns = 18;
     
     //$info2 = $thisDatabaseReader->testquery($query, "", 0, 0, 2, 0, false, false);

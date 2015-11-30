@@ -9,7 +9,7 @@ include "top.php";
 
 
 ?>
-<h1>Select a recipe</h1>
+<h2>Select a recipe</h2>
 
 <a href="BananaBread.php">Banana Bread</a>
 <a href="BlueberryMuffins.php">Blueberry Muffins</a>
