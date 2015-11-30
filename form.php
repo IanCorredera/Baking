@@ -215,11 +215,11 @@ if (isset($_POST["btnSubmit"])) {
 
         <form action="<?php print $phpSelf; ?>"
               method="post"
-              id="frmRegister">
+              id="frmIngredients">
 
             <fieldset class="wrapper">
-                <legend>Register Today</legend>
-                <p>You information will greatly help us with our research.</p>
+                <legend>Enter Ingredients</legend>
+                <p>List the ingredients you have on hand to find recipes that you can make</p>
 
                 <fieldset class="wrapperTwo">
                     <legend>Please complete the following form</legend>
@@ -244,6 +244,153 @@ if (isset($_POST["btnSubmit"])) {
                                    >
                         </label>
                     </fieldset> <!-- ends contact -->
+                    
+                    <fieldset class="ingredients">
+                        <legend>Ingredients</legend>
+                        <label for="txtIngred1" class="required">
+                            <input type="text" id="txtIngred1" name="txtIngred1"
+                                   value="<?php print $ingred1; ?>"
+                                   tabindex="100" maxlength="45" placeholder="Enter name of an ingredient"
+                                   <?php if ($ingred1ERROR) print 'class="mistake"'; ?>
+                                   onfocus="this.select()"
+                                   autofocus>
+                        </label>
+                        
+                        <label for="txtIngred2">
+                            <input type="text" id="txtIngred2" name="txtIngred2"
+                                   value="<?php print $ingred2; ?>"
+                                   tabindex="100" maxlength="45" placeholder="Enter name of an ingredient"
+                                   <?php if ($ingred2ERROR) print 'class="mistake"'; ?>
+                                   onfocus="this.select()"
+                                   autofocus>
+                        </label>
+                        
+                        <label for="txtIngred3">
+                            <input type="text" id="txtIngred3" name="txtIngred3"
+                                   value="<?php print $ingred3; ?>"
+                                   tabindex="100" maxlength="45" placeholder="Enter name of an ingredient"
+                                   <?php if ($ingred3ERROR) print 'class="mistake"'; ?>
+                                   onfocus="this.select()"
+                                   autofocus>
+                        </label>
+                        
+                        <label for="txtIngred4">
+                            <input type="text" id="txtIngred4" name="txtIngred4"
+                                   value="<?php print $ingred4; ?>"
+                                   tabindex="100" maxlength="45" placeholder="Enter name of an ingredient"
+                                   <?php if ($ingred4ERROR) print 'class="mistake"'; ?>
+                                   onfocus="this.select()"
+                                   autofocus>
+                        </label>
+                        
+                        <label for="txtIngred5">
+                            <input type="text" id="txtIngred3" name="txtIngred5"
+                                   value="<?php print $ingred5; ?>"
+                                   tabindex="100" maxlength="45" placeholder="Enter name of an ingredient"
+                                   <?php if ($ingred5ERROR) print 'class="mistake"'; ?>
+                                   onfocus="this.select()"
+                                   autofocus>
+                        </label>
+                        
+                        <label for="txtIngred6">
+                            <input type="text" id="txtIngred6" name="txtIngred6"
+                                   value="<?php print $ingred6; ?>"
+                                   tabindex="100" maxlength="45" placeholder="Enter name of an ingredient"
+                                   <?php if ($ingred6ERROR) print 'class="mistake"'; ?>
+                                   onfocus="this.select()"
+                                   autofocus>
+                        </label>
+                        
+                        <label for="txtIngred7">
+                            <input type="text" id="txtIngred7" name="txtIngred7"
+                                   value="<?php print $ingred7; ?>"
+                                   tabindex="100" maxlength="45" placeholder="Enter name of an ingredient"
+                                   <?php if ($ingred7ERROR) print 'class="mistake"'; ?>
+                                   onfocus="this.select()"
+                                   autofocus>
+                        </label>
+                        
+                        <label for="txtIngred8">
+                            <input type="text" id="txtIngred8" name="txtIngred8"
+                                   value="<?php print $ingred8; ?>"
+                                   tabindex="100" maxlength="45" placeholder="Enter name of an ingredient"
+                                   <?php if ($ingred8ERROR) print 'class="mistake"'; ?>
+                                   onfocus="this.select()"
+                                   autofocus>
+                        </label>
+                        
+                        <label for="txtIngred8">
+                            <input type="text" id="txtIngred8" name="txtIngred8"
+                                   value="<?php print $ingred8; ?>"
+                                   tabindex="100" maxlength="45" placeholder="Enter name of an ingredient"
+                                   <?php if ($ingred8ERROR) print 'class="mistake"'; ?>
+                                   onfocus="this.select()"
+                                   autofocus>
+                        </label>
+                        
+                        <label for="txtIngred9">
+                            <input type="text" id="txtIngred9" name="txtIngred9"
+                                   value="<?php print $ingred9; ?>"
+                                   tabindex="100" maxlength="45" placeholder="Enter name of an ingredient"
+                                   <?php if ($ingred9ERROR) print 'class="mistake"'; ?>
+                                   onfocus="this.select()"
+                                   autofocus>
+                        </label>
+                        
+                        <label for="txtIngred10">
+                            <input type="text" id="txtIngred10" name="txtIngred10"
+                                   value="<?php print $ingred10; ?>"
+                                   tabindex="100" maxlength="45" placeholder="Enter name of an ingredient"
+                                   <?php if ($ingred10ERROR) print 'class="mistake"'; ?>
+                                   onfocus="this.select()"
+                                   autofocus>
+                        </label>
+                        
+                        <label for="txtIngred11">
+                            <input type="text" id="txtIngred11" name="txtIngred11"
+                                   value="<?php print $ingred11; ?>"
+                                   tabindex="100" maxlength="45" placeholder="Enter name of an ingredient"
+                                   <?php if ($ingred11ERROR) print 'class="mistake"'; ?>
+                                   onfocus="this.select()"
+                                   autofocus>
+                        </label>
+                        
+                        <label for="txtIngred12">
+                            <input type="text" id="txtIngred12" name="txtIngred12"
+                                   value="<?php print $ingred12; ?>"
+                                   tabindex="100" maxlength="45" placeholder="Enter name of an ingredient"
+                                   <?php if ($ingred12ERROR) print 'class="mistake"'; ?>
+                                   onfocus="this.select()"
+                                   autofocus>
+                        </label>
+                        
+                        <label for="txtIngred13">
+                            <input type="text" id="txtIngred13" name="txtIngred13"
+                                   value="<?php print $ingred13; ?>"
+                                   tabindex="100" maxlength="45" placeholder="Enter name of an ingredient"
+                                   <?php if ($ingred13ERROR) print 'class="mistake"'; ?>
+                                   onfocus="this.select()"
+                                   autofocus>
+                        </label>
+                        
+                        <label for="txtIngred14">
+                            <input type="text" id="txtIngred14" name="txtIngred14"
+                                   value="<?php print $ingred14; ?>"
+                                   tabindex="100" maxlength="45" placeholder="Enter name of an ingredient"
+                                   <?php if ($ingred14ERROR) print 'class="mistake"'; ?>
+                                   onfocus="this.select()"
+                                   autofocus>
+                        </label>
+                        
+                        <label for="txtIngred15">
+                            <input type="text" id="txtIngred15" name="txtIngred15"
+                                   value="<?php print $ingred15; ?>"
+                                   tabindex="100" maxlength="45" placeholder="Enter name of an ingredient"
+                                   <?php if ($ingred15ERROR) print 'class="mistake"'; ?>
+                                   onfocus="this.select()"
+                                   autofocus>
+                        </label>
+                    </fieldset> <!-- ends ingredient -->
                     
                 </fieldset> <!-- ends wrapper Two -->
                 
