@@ -247,7 +247,7 @@ if (isset($_POST["btnSubmit"])) {
                        value="<?php print $pmkPoetId; ?>"
                        >
 
-                <label for="ingred1" class="required">First Name
+                <label for="ingred1" class="required">
                     <input type="text" id="ingred1" name="ingred1"
                            value="<?php print $ingred1; ?>"
                            tabindex="100" maxlength="45" placeholder="Enter ingredient name"
