@@ -10,9 +10,9 @@
 
 include "top.php";
 
-print '<h2>Banana Bread</h2>';
 
-print '<table>';
+
+print '<ul style="list-style-type:none">';
 
 $query = "select tblRecipes.pmkRecipeName, fldYield, fldBakeTime, fldIngredient1, fldIngredient2, fldIngredient3, fldIngredient4, fldIngredient5, fldIngredient6, fldIngredient7, fldIngredient8, fldIngredient9, fldIngredient10, fldIngredient11, fldIngredient12, fldIngredient13, fldStep1, fldStep2, fldStep3, fldStep4, fldStep5, fldStep6 
 from tblRecipes, tblIngredients, tblDirections
@@ -25,23 +25,35 @@ and tblRecipes.pmkRecipeName = 'Banana Bread'";
     //$info2 = $thisDatabaseReader->testquery($query, "", 0, 0, 2, 0, false, false);
     $info2 = $thisDatabaseReader->select($query, "", 0, 0, 2, 0, false, false);
 
-    $highlight = 0; // used to highlight alternate rows
+    
     foreach ($info2 as $rec) {
-        $highlight++;
-        if ($highlight % 2 != 0) {
-            $style = ' odd ';
-        } else {
-            $style = ' even ';
+        
+        //print records
+        for ($i = 0; $i < 1; $i++) {
+            print '<h2>' . $rec[$i] . '</h2>';
         }
-        print '<tr class="' . $style . '">';
-        for ($i = 0; $i < $columns; $i++) {
-            print '<td>' . $rec[$i] . '</td>';
+        print '<p>Yield:</p>';
+        for ($i = 1; $i < 2; $i++) {
+            print '<li>' . $rec[$i] . '</li>';
         }
-        print '</tr>';
+        print '<p>Baking time:</p>';
+        for ($i = 2; $i < 3; $i++) {
+            print '<li>' . $rec[$i] . '</li>';
+        }
+        print '<br />';
+        print '<p>Ingredients:</p>';
+        for ($i = 3; $i < 16; $i++) {
+            print '<li>' . $rec[$i] . '</li>';
+        }
+        print '<br />';
+        print '<p>Directions:</p>';
+        for ($i = 16; $i < 22; $i++) {
+            print '<li>' . $rec[$i] . '</li>';
+        }
     }
 
     // all done
-    print '</table>';
+    print '</ul>';
 
     include 'footer.php';
     ?>
