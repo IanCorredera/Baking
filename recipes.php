@@ -15,7 +15,9 @@ include "top.php";
 <a href="BlueberryMuffins.php">Blueberry Muffins</a>
 <a href="ChocolateChipCookies.php">Chocolate Chip Cookies</a>
 <a href="Lemon-PoppySeedBread.php">Lemon-Poppy Seed Bread</a>
-
+<a href="AlmondCloudCookies.php">Almond Cloud Cookies</a>
+<a href="ButtermilkGranolaMuffins.php">Buttermilk Granola Muffins</a>
+<a href="ZucchiniLemonMuffins.php">Zucchini Lemon Muffins</a>
 <?php
 
 include "footer.php";

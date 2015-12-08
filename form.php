@@ -28,10 +28,10 @@ $yourURL = $domain . $phpSelf;
 // in the order they appear on the form
 
 if (isset($_GET["id"])) {
-    $pmkEmail = (int) htmlentities($_GET["id"], ENT_QUOTES, "UTF-8");
+    $pmkEmail = htmlentities($_GET["id"], ENT_QUOTES, "UTF-8");
 
-    $query = 'SELECT fldFirstName, fldLastName, fldBirthDate ';
-    $query .= 'FROM tblPoet WHERE pmkPoetId = ?';
+    $query = 'SELECT pmkEmail, fldFirstName, fldIngred1 ';
+    $query .= 'FROM tblUserIngredients WHERE pmkEmail = ?';
 
     $results = $thisDatabase->select($query, array($pmkEmail), 1, 0, 0, 0, false, false);
 
@@ -157,20 +157,20 @@ if (isset($_POST["btnSubmit"])) {
 
             if ($update) {
                 $query .= 'WHERE pmkEmail = ?';
-                $data[] = $pmkPoetId;
+                $data[] = $pmkEmail;
 
                 if ($_SERVER["REMOTE_USER"] == 'icorrede') {
                     $results = $thisDatabase->update($query, $data, 1, 0, 0, 0, false, false);
                 }
-            } else {
-                if ($_SERVER["REMOTE_USER"] == 'icorrede'){
-                    $results = $thisDatabase->insert($query, $data);
-                    $primaryKey = $thisDatabase->lastInsert();
-                    if ($debug) {
-                        print "<p>pmk= " . $primaryKey;
-                    }
-                }
-            }
+            } //else {
+                //if ($_SERVER["REMOTE_USER"] == 'icorrede'){
+                   // $results = $thisDatabase->insert($query, $data);
+                   // $primaryKey = $thisDatabase->lastInsert();
+                   // if ($debug) {
+                    //    print "<p>pmk= " . $primaryKey;
+                   // }
+                //}
+            //}
 
             // all sql statements are done so lets commit to our changes
             //if($_SERVER["REMOTE_USER"]=='rerickso'){

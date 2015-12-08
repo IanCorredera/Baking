@@ -10,5 +10,8 @@ INSERT INTO tblRecipes (pmkRecipeName, fldYield, fldBakeTime, fldCategory) VALUE
 ('Lemon-Poppy Seed Bread', 'One 9x5-inch loaf', '1 hour', 'Quick Bread'),
 ('Banana Bread', 'One 9x5-inch loaf', '1 hour', 'Quick Bread'),
 ('Chocolate Chip Cookies', '3 dozen cookies', '10 minutes', 'Cookies'),
-('Blueberry Muffins', '12 muffins', '20 minutes', 'Muffins');
+('Blueberry Muffins', '12 muffins', '20 minutes', 'Muffins'),
+('Buttermilk Granola Muffins', '12 muffins', '16-18 minutes', 'Muffins'),
+('Zucchini Lemon Muffins', '12 muffins', '20-25 minutes', 'Muffins'),
+('Almond Cloud Cookies', '21 cookies', '20-25 minutes', 'Cookies');
 

@@ -35,12 +35,12 @@ if (isset($_GET["id"])) {
 
     $results = $thisDatabase->select($query, array($pmkPoetId), 1, 0, 0, 0, false, false);
 
-    $ingred1 = $results[0]["fldIngredient1"];
+    $firstName = $results[0]["fldFirstName"];
     $lastName = $results[0]["fldLastName"];
     $birthday = $results[0]["fldBirthDate"];
 } else {
     $pmkPoetId = -1;
-    $ingred1 = "";
+    $firstName = "";
     $lastName = "";
     $birthday = "";
 }
@@ -51,7 +51,7 @@ if (isset($_GET["id"])) {
 //
 // Initialize Error Flags one for each form element we validate
 // in the order they appear in section 1c.
-$ingred1ERROR = false;
+$firstNameERROR = false;
 $lastNameERROR = false;
 $birthdayERROR = false;
 //%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
@@ -89,8 +89,8 @@ if (isset($_POST["btnSubmit"])) {
     }
     // I am not putting the ID in the $data array at this time
 
-    $ingred1 = htmlentities($_POST["ingred1"], ENT_QUOTES, "UTF-8");
-    $data[] = $ingred1;
+    $firstName = htmlentities($_POST["txtFirstName"], ENT_QUOTES, "UTF-8");
+    $data[] = $firstName;
 
     $lastName = htmlentities($_POST["txtLastName"], ENT_QUOTES, "UTF-8");
     $data[] = $lastName;
@@ -103,21 +103,21 @@ if (isset($_POST["btnSubmit"])) {
 // SECTION: 2c Validation
 //
 
-    if ($ingred1 == "") {
-        $errorMsg[] = "Please an ingredient";
+    if ($firstName == "") {
+        $errorMsg[] = "Please enter your first name";
         $firstNameERROR = true;
-    } elseif (!verifyAlphaNum($ingred1)) {
-        $errorMsg[] = "Your first name appears to have extra character.";
-        $firstNameERROR = true;
-    }
+    } //elseif (!verifyAlphaNum($firstName)) {
+        //$errorMsg[] = "Your first name appears to have extra character.";
+        //$firstNameERROR = true;
+    //}
 
     if ($lastName == "") {
         $errorMsg[] = "Please enter your last name";
         $lastNameERROR = true;
-    } elseif (!verifyAlphaNum($lastName)) {
-        $errorMsg[] = "Your last name appears to have extra character.";
-        $lastNameERROR = true;
-    }
+    }// elseif (!verifyAlphaNum($lastName)) {
+       // $errorMsg[] = "Your last name appears to have extra character.";
+        //$lastNameERROR = true;
+    //}
 
     if ($birthday == "") {
         $errorMsg[] = "Please enter the poets birthday";
@@ -144,12 +144,12 @@ if (isset($_POST["btnSubmit"])) {
             $thisDatabase->db->beginTransaction();
 
             if ($update) {
-                $query = 'UPDATE tblUserIngredients SET ';
+                $query = 'UPDATE tblPoet SET ';
             } else {
-                $query = 'INSERT INTO tblUserIngredients SET ';
+                $query = 'INSERT INTO tblPoet SET ';
             }
 
-            $query .= 'fldIngredient1 = ?, ';
+            $query .= 'fldFirstName = ?, ';
             $query .= 'fldLastName = ?, ';
             $query .= 'fldBirthDate = ? ';
 
@@ -157,11 +157,11 @@ if (isset($_POST["btnSubmit"])) {
                 $query .= 'WHERE pmkPoetId = ?';
                 $data[] = $pmkPoetId;
 
-                if ($_SERVER["REMOTE_USER"] == 'icorrede') {
+                if ($_SERVER["REMOTE_USER"] == 'rerickso') {
                     $results = $thisDatabase->update($query, $data, 1, 0, 0, 0, false, false);
                 }
             } else {
-                if ($_SERVER["REMOTE_USER"] == 'icorrede'){
+                if ($_SERVER["REMOTE_USER"] == 'rerickso'){
                     $results = $thisDatabase->insert($query, $data);
                     $primaryKey = $thisDatabase->lastInsert();
                     if ($debug) {
@@ -241,17 +241,17 @@ if (isset($_POST["btnSubmit"])) {
               method="post"
               id="frmRegister">
             <fieldset class="wrapper">
-                <legend>Ingredients</legend>
+                <legend>Poets</legend>
 
                 <input type="hidden" id="hidPoetId" name="hidPoetId"
                        value="<?php print $pmkPoetId; ?>"
                        >
 
-                <label for="ingred1" class="required">
-                    <input type="text" id="ingred1" name="ingred1"
-                           value="<?php print $ingred1; ?>"
-                           tabindex="100" maxlength="45" placeholder="Enter ingredient name"
-    <?php if ($ingred1ERROR) print 'class="mistake"'; ?>
+                <label for="txtFirstName" class="required">First Name
+                    <input type="text" id="txtFirstName" name="txtFirstName"
+                           value="<?php print $firstName; ?>"
+                           tabindex="100" maxlength="45" placeholder="Enter your first name"
+    <?php if ($firstNameERROR) print 'class="mistake"'; ?>
                            onfocus="this.select()"
                            autofocus>
                 </label>
